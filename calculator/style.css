@@ -1,0 +1,55 @@
+.main-body{
+    margin: auto;
+    border: solid 5px rgb(13, 0, 128);
+    max-width: max-content;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;             
+     user-select: none;          
+     background-color: blanchedalmond;                         
+}
+
+.buttons {
+    display: inline-block;
+    width: 60px;
+    display: inline-flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 3px solid rgb(214, 163, 163);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.buttonempty {
+    display: inline-block;
+    width: 60px;
+    display: inline-flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: default;
+    opacity: 0;
+}
+
+.buttons:hover {
+    background-color: rgb(81, 139, 139);
+}
+
+.screen {
+    text-align: right;
+    width: 238px;
+    height: 60px;
+    background-color: lightgray;
+    border: 3px solid grey;
+    font-size: larger;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: default;
+}
