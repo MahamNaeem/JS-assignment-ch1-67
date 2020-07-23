@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title> Chapter 58-67</title>
+
+</head>
+
+<body>
+
+    <body> <div> <h1> DOM </h1> <div id="form-content" class="content"> <label for="first-name">First Name</label> <input type="text" id="first-name"/> <label for="last-name">Last Name</label> <input type="text" id="last-name"/> <label for="email">Email</label> <input type="text" id="email"/> </div><div id="main-content" class="content"> <p class="render"> First Name : Alex</p><p class="render" id="lastName">Last Name: Bank</p><p class="render"> Email : alexbank@example.com</p><p class="render"> Country : Pakistan </p><p class="render"> contact : +92 300 1234567</p></div></div>
+    <script>
+        var content = document.getElementById("main-content");
+        console.log("Child Nodes Of Main content");
+        for (var i = 0; i < 5; i++) {
+              console.log(content.childNodes[i]);
+        }
+        var rend = document.getElementsByClassName("render");
+        for (var i = 0; i < 4; i++) {
+            console.log(rend[i].innerHTML);
+        }
+        document.getElementById("first-name").value = "Maham";
+        document.getElementById("last-name").value = "Naeem";
+        document.getElementById("email").value = "Maham@gmail.com";
+
+        nodevalue = document.getElementById("main-content").nodeType;
+        console.log("Node Type of Main content", nodevalue);
+        lastname = document.getElementById("lastName").nodeType;
+        child = document.getElementById("lastName").childNodes[0].nodeType;
+
+        console.log("Last Name node type", lastname, "Its Child Node type", child);
+        document.getElementById("lastName").innerText = "Last Name: Jane";
+
+        main=document.getElementById("main-content");
+        first=main.firstChild;
+        last=main.lastChild;
+        console.log("First child of main-content",first," last Child of main",last);
+
+        lastName=document.getElementById("lastName");
+        next=lastName.nextSibling;
+        previous=lastName.previousSibling;
+
+       console.log("last name next sibling" ,next);
+       console.log("last name previous Sibling",previous);
+
+       email=document.getElementById("email");
+       parent= email.parentNode;
+       console.log("Email Parent Node is: ",parent)
+       console.log("Email Node Type is: ",email.nodeType);
+    </script>
+</body>
+
+</html>
